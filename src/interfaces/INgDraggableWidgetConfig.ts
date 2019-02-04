@@ -23,6 +23,7 @@ export interface INgWidgetContainerConfig {
 	allow_overlap?: boolean;
 	widget_width_factor?: number;
 	widget_height_factor?: number;
+	debug?: boolean;
 }
 
 export interface INgWidgetConfig {

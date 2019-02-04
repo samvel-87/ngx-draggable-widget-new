@@ -43,7 +43,8 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 		zoom_on_drag: false,
 		allow_overlap: false,
 		widget_width_factor: 0,
-		widget_height_factor: 0
+		widget_height_factor: 0,
+		debug: false
 	};
 
 	// 	event Emitters
@@ -310,7 +311,9 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 			const changes = this._differ.diff(this._config);
 
 			if (changes != null) {
-				console.log('ngDoCheck -> NgWidgetContainer');
+				if(this._config.debug){
+					console.log('ngDoCheck -> NgWidgetContainer');
+				}
 				this._applyChanges(changes);
 
 				return true;
@@ -581,7 +584,10 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 				const itemPos = item.getPosition();
 				const pOffset = { 'left': (mousePos.left - itemPos.left), 'top': (mousePos.top - itemPos.top) };
 				item.setWidgetDragStartPosition(item.getWidgetPosition());
-				console.log('_dragStart -> dragStartPosition', item.getWidgetDragStartPosition());
+				if(this._config.debug){
+					console.log('_dragStart -> dragStartPosition', item.getWidgetDragStartPosition());
+				}
+
 
 				item.startMoving();
 				this._draggingItem = item;
@@ -611,7 +617,10 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 
 	private _drag(e: any): void {
 		if (this.isDragging) {
-			console.log('_drag');
+			if(this._config.debug){
+				console.log('_drag');
+			}
+
 			if (window.getSelection) {
 				if (window.getSelection().empty) {
 					window.getSelection().empty();
@@ -638,16 +647,22 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 
 			if (gridPos.col !== itemPos.col || gridPos.row !== itemPos.row) {
 			// if (Math.abs(gridPos.col - itemPos.col) > 10 || Math.abs(gridPos.row - itemPos.row) > 10) {
-				console.log('_drag', gridPos, itemPos);
+				if(this._config.debug) {
+					console.log('_drag', gridPos, itemPos);
+				}
 				this._draggingItem.setGridPosition(gridPos, this._fixToGrid);
 				this._placeholderRef.instance.setGridPosition(gridPos);
 
 				if (['up', 'down', 'left', 'right'].indexOf(this.cascade) >= 0) {
 					if (Math.abs(gridPos.col - itemPos.col) > 10 || Math.abs(gridPos.row - itemPos.row) > 10) {
-						console.log('_drag fixGridCollision', gridPos, dims);
+						if(this._config.debug) {
+							console.log('_drag fixGridCollision', gridPos, dims);
+						}
 						this._fixGridCollisions(gridPos, dims);
 					}
-					console.log('_drag cascade', gridPos, dims);
+					if(this._config.debug) {
+						console.log('_drag cascade', gridPos, dims);
+					}
 					this._cascadeGrid(gridPos, dims);
 				}
 			}
@@ -722,7 +737,9 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 
 			const itemPos = this._draggingItem.getWidgetPosition();
 			const itemDragStartPos = this._draggingItem.getWidgetDragStartPosition();
-			console.log('_dragStop itemPos, dragStartPos', itemPos, itemDragStartPos);
+			if(this._config.debug) {
+				console.log('_dragStop itemPos, dragStartPos', itemPos, itemDragStartPos);
+			}
 			this._draggingItem.setGridPosition(itemPos);
 			// if (this.allowOverlap) {
 			// 	this._draggingItem.setGridPosition(itemPos);
@@ -1002,7 +1019,9 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy {
 							// if (lowest !== itemPos.col && this._isWithinBoundsX(newPos, itemDims)) {	// 	if the item is not already on this col move it up
 							if (lowest !== itemPos.col && lowest < itemPos.col && this._isWithinBoundsX(newPos, itemDims)) {	// 	if the item is not already on this col move it up
 								this._removeFromGrid(item);
-								console.log('_cascadeGrid called setGridPosition', this.cascade, lowest, itemPos, newPos, itemDims);
+								if(this._config.debug) {
+									console.log('_cascadeGrid called setGridPosition', this.cascade, lowest, itemPos, newPos, itemDims);
+								}
 
 								item.setGridPosition(newPos);
 
