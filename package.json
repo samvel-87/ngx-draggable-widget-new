@@ -1,6 +1,6 @@
 {
   "name": "draggable",
-  "version": "0.0.0",
+  "version": "1.0.7-j",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -51,5 +51,14 @@
     "tslib": "^1.9.3",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
-  }
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/KAMAELUA/ngx-draggable-widget.git"
+  },
+  "author": {
+    "name": "Andrey Chugay",
+    "email": "kamaelua@gmail.com"
+  },
+  "contributors": ["Arup Banerjee <arup@alanaamy.net> (https//www.alanaamy.net)"]
 }

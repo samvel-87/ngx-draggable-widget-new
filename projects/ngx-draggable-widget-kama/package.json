@@ -10,6 +10,13 @@
   },
   "dependencies": {
   },
-  "author": "Andrey Chugay",
-  "contributors": ["Arup Banerjee arup@alanaamy.net (https//www.alanaamy.net)"]
+  "author": {
+    "name": "Andrey Chugay",
+    "email": "kamaelua@gmail.com"
+  },
+  "contributors": ["Arup Banerjee <arup@alanaamy.net> (https//www.alanaamy.net)"]
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/KAMAELUA/ngx-draggable-widget.git"
+  }
 }
