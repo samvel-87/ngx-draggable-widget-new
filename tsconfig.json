@@ -1,35 +1,30 @@
 {
-    "compilerOptions": {
-        "baseUrl": "src",
-        "declaration": true,
-        "stripInternal": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "module": "es2015",
-        "moduleResolution": "node",
-        "paths": {
-            "@angular/core": ["node_modules/@angular/core"],
-            "rxjs/*": ["node_modules/rxjs/*"]
-        },
-        "rootDir": "src",
-        "outDir": "dist",
-        "sourceMap": true,
-        "inlineSources": true,
-        "target": "es5",
-        "skipLibCheck": true,
-        "lib": [
-            "es2015",
-            "dom"
-        ]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "ngx-draggable-widget-kama": [
+        "dist/ngx-draggable-widget-kama"
+      ],
+      "ngx-draggable-widget-kama/*": [
+        "dist/ngx-draggable-widget-kama/*"
+      ]
     },
-    "files": [
-        "src/main.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ],
-    "angularCompilerOptions": {
-        "strictMetadataEmit": true,
-        "skipTemplateCodegen": true
-    }
+    "importHelpers": false
+  }
 }

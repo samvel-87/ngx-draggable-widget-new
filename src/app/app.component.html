@@ -1,0 +1,21 @@
+<div [ngWidgetContainer]="WIDGET_CONTAINER_FORMATINGS" style="background-color: rgba(255,255,255, 0.3)">
+  <div *ngFor="let widget of widgets; let i = index"
+       [(ngWidget)]="widget.config">
+    <div class="widget-box {{widget.component}}">
+      <div class="widget-header">
+        <h3>{{widget.title}} {{widget.component}}</h3>
+        <div class="widget-controls" >
+          <!--div class="widget-settings" *ngIf="widget.component !== 'app-info-board'"><i class="fa fa-cog"></i></div-->
+          <div class="widget-zoom" *ngIf="!widget.maximise">
+            <i class="fa fa-expand"></i>
+          </div>
+          <div class="widget-zoom" *ngIf="widget.maximise">
+            <i class="fa fa-compress"></i>
+          </div>
+        </div>
+      </div>
+      test
+    </div>
+  </div>
+</div>
+
