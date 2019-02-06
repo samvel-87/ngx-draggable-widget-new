@@ -1,6 +1,6 @@
 {
   "name": "draggable",
-  "version": "1.0.7-j",
+  "version": "1.0.7-m",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -429,7 +429,6 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy, INgWidgetC
 
     @HostListener('window:resize', ['$event'])
     public resizeEventHandler(e: any): void {
-        console.log('resizeEventHandler', e);
         this._calculateColWidth();
         this._calculateRowHeight();
 
@@ -450,7 +449,6 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy, INgWidgetC
     @HostListener('touchstart', ['$event'])
     @HostListener('mousedown', ['$event'])
     public mouseDownEventHandler(e: MouseEvent): void {
-        console.log('mouseDownEventHandler', e);
         const mousePos = this._getMousePosition(e);
         const widget = this._getItemFromPosition(mousePos);
 
