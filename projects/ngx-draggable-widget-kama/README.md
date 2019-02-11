@@ -12,12 +12,10 @@ The demo included in this repo follows the [Angular CLI based quick start](https
 
 Check the live example at [Ngx Draggable Widget Demo with dynamic configuration](http://draggablewidgets.alanaamy.net/)
 
-Or Check another live working example [Draggable Dashboard](http://draggabledashboard.alanaamy.net) which is a working typescript angular cli example project located at [draggable dashboard folder in the source](https://github.com/arup-banerjee/ngx-draggable-widget/tree/master/draggable-dashboard) using ngx-draggable-widget
-
 #### Setup
 ----------
 
-To use the Ngx Draggable Widget, simply run `npm install ngx-draggable-widget` and then include the `NgDraggableWidgetModule` in your project module imports (see Example for more details).
+To use the Ngx Draggable Widget, simply run `npm install ngx-draggable-widget-kama` and then include the `NgDraggableWidgetModule` in your project module imports (see Example for more details).
 
 If you want help with development or try the demo, it's not hard. First you'll need to install [Node](http://nodejs.org) and check out a copy of the repo. Then run:
 
@@ -30,13 +28,12 @@ This will give you a fully compiled version of the demo that you can run using t
 
 `ng serve` will compile the demo and watch for any changes.
 
-NOTE: By default Angular 4 and System.js are not listed as actual dependencies, but as peer dependencies, so that npm doesn't install them on systems that just require the install file. If they are not installed, this could cause `ng serve` or `ng build` to fail. To fix this, run `npm install angular systemjs` and rerun the build command.
 
 ## Angular cli projects and styles
 If you are already using a cli project or creating a new cli project, you may find useful to add the NgDraggableWidget.css to the styles in .angular-cli.json. 
 ```javascript
         "styles": [
-            "../node_modules/ngx-draggable-widget/NgDraggableWidget.css"
+            "../node_modules/ngx-draggable-widget-kama/NgDraggableWidget.css"
         ],
 ```
 You can change the widget-container background-color for default to whichever suits you in your suitable scss , css file for example in style.scss or app.component.scss .. or wherever logical suits your need
@@ -50,7 +47,7 @@ like below
 #### Config
 -----------
 
-To use this in your own application, all you need to do is add the **`[ngWidgetContainer]`** attribute to your container element and **`[ngWidget]`** to each item. You can use this in conjunction with `NgFor` and or `ngSwitch` to create a truly dynamic Angular 4 dashboard of widgets.
+To use this in your own application, all you need to do is add the **`[ngWidgetContainer]`** attribute to your container element and **`[ngWidget]`** to each item. You can use this in conjunction with `NgFor` and or `ngSwitch` to create a truly dynamic Angular 6 dashboard of widgets.
 
 To configure the widget container with your own options, it is as easy as adding them as the attribute value. The defaults for the widget container are:
 
@@ -216,20 +213,3 @@ to your typescript imports, and ensuring that your `@NgModule` annotation looks 
 })
 ```
 
-As of the Angular 4 Release Candidate you will now need to have the following in your System.js configuration, assuming that you are following the same format as the [Angular 2 Quick Start](https://angular.io/docs/ts/latest/quickstart.html):
-
-```
-map: {
-    'ngx-draggable-widget': 'node_modules/ngx-draggable-widget/dist/js'
-}
-
-packages: {
-    'ngx-draggable-widget': { main: 'main.js',  defaultExtension: 'js' }
-}
-```
-
-Alternatively, you can use the bundled version by setting the `map` value to `'node_modules/ngx-draggable-widget/dist/bundles'` and the `main` value within packages to `NgDraggableWidget.min.js`.
-
-## Credits
-
-The library is inspired by [angular2-grid](https://github.com/BTMorton/angular2-grid)
