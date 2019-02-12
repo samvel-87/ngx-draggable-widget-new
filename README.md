@@ -17,7 +17,7 @@ Or Check another live working example [Draggable Dashboard](http://draggabledash
 #### Setup
 ----------
 
-To use the Ngx Draggable Widget, simply run `npm install ngx-draggable-widget` and then include the `NgDraggableWidgetModule` in your project module imports (see Example for more details).
+To use the Ngx Draggable Widget Kama, simply run `npm install ngx-draggable-widget-kama` and then include the `NgDraggableWidgetModule` in your project module imports (see Example for more details).
 
 If you want help with development or try the demo, it's not hard. First you'll need to install [Node](http://nodejs.org) and check out a copy of the repo. Then run:
 
@@ -36,7 +36,7 @@ NOTE: By default Angular 4 and System.js are not listed as actual dependencies, 
 If you are already using a cli project or creating a new cli project, you may find useful to add the NgDraggableWidget.css to the styles in .angular-cli.json. 
 ```javascript
         "styles": [
-            "../node_modules/ngx-draggable-widget/NgDraggableWidget.css"
+            "../node_modules/ngx-draggable-widget-kama/NgDraggableWidget.css"
         ],
 ```
 You can change the widget-container background-color for default to whichever suits you in your suitable scss , css file for example in style.scss or app.component.scss .. or wherever logical suits your need
@@ -81,6 +81,7 @@ To configure the widget container with your own options, it is as easy as adding
 |limit_to_screen|false|When resizing the screen, with this true and auto_resize false, the grid will re-arrange to fit the screen size. Please note, at present this only works with cascade direction up.
 |widget_width_factor|22|number of pixels that defines a logical user defined width. By default this is not set.However if this is set then unitx in the respective widget will be used to set the initial size of the the widget and override sizex of the widget. Note this is only meaningful to the widgets if they specifically have unitx defined. Else this value has no effect
 |widget_height_factor|22|number of pixels that defines a logical user defined height. By default this is not set.However if this is set then unity in the respective widget will be used to set the initial size of the the widget height and override sizey of the widget. Note this is only meaningful to the widgets if they specifically have unity defined. Else this value has no effect
+|debug|false|Enables debug logging into console for the widget container
 
 #### The defaults for the widget item are:
 
@@ -105,6 +106,7 @@ To configure the widget container with your own options, it is as easy as adding
 |minHeight|0|The minimum height of a particular widget. This value will override the value from the widget container, as well as the minimum rows if the resulting size is larger
 |unitx|0|The unitx defines the initial logical width of the widget. The actual width in pixels is the multiple of this logical unit with the corresponding widget_width_factor
 |unity|0|The unity defines the initial logical height of the widget. The actual height in pixels is the multiple of this logical unit with the corresponding widget_height_factor
+|debug|false|Enables debug logging into console for the current widget
 
 #### Event Handling
 -------------------
@@ -158,7 +160,7 @@ interface NgWidgetEvent {
 #### Styling
 ------------
 
-There are three elements that can be styled with ngx-draggable-widget, the container itself `.widget-container`, the items `.widget` and the placeholder `.widget-placeholder`. The demo includes some basic styling in NgWidgetContainer.css which you can include in your app's `styleUrls` property. It also includes some @media queries styles to handle responsiveness on smaller screens. This simple force the boxes to full width and puts them inline in their original order. This is optional functionality and does not need to be included. In order for correct functionality, the required styles are added by the classes themselves at run-time:
+There are three elements that can be styled with ngx-draggable-widget-kama, the container itself `.widget-container`, the items `.widget` and the placeholder `.widget-placeholder`. The demo includes some basic styling in NgWidgetContainer.css which you can include in your app's `styleUrls` property. It also includes some @media queries styles to handle responsiveness on smaller screens. This simple force the boxes to full width and puts them inline in their original order. This is optional functionality and does not need to be included. In order for correct functionality, the required styles are added by the classes themselves at run-time:
 
 ```css
 .widget-container {
@@ -199,7 +201,7 @@ The **`NgDraggableContainer`** and **`NgWidget`** can be configured by binding d
 In order to include the relevant files, you will need to import the `NgDraggableWidgetModule` to your app and add them to the `@NgModule` imports. This can be achieved by adding:
 
 ```typescript
-import { NgDraggableWidgetModule } from 'ngx-draggable-widget';
+import { NgDraggableWidgetModule } from 'ngx-draggable-widget-kama';
 ```
 
 to your typescript imports, and ensuring that your `@NgModule` annotation looks similar to the following:
@@ -215,21 +217,3 @@ to your typescript imports, and ensuring that your `@NgModule` annotation looks 
     ...
 })
 ```
-
-As of the Angular 4 Release Candidate you will now need to have the following in your System.js configuration, assuming that you are following the same format as the [Angular 2 Quick Start](https://angular.io/docs/ts/latest/quickstart.html):
-
-```
-map: {
-    'ngx-draggable-widget': 'node_modules/ngx-draggable-widget/dist/js'
-}
-
-packages: {
-    'ngx-draggable-widget': { main: 'main.js',  defaultExtension: 'js' }
-}
-```
-
-Alternatively, you can use the bundled version by setting the `map` value to `'node_modules/ngx-draggable-widget/dist/bundles'` and the `main` value within packages to `NgDraggableWidget.min.js`.
-
-## Credits
-
-The library is inspired by [angular2-grid](https://github.com/BTMorton/angular2-grid)
