@@ -15,7 +15,7 @@
     "lib": [
       "dom",
       "es2015"
-    ],
+    ]
   },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
@@ -24,6 +24,7 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "enableResourceInlining": true,
+    "enableIvy": false
   },
   "exclude": [
     "src/test.ts",

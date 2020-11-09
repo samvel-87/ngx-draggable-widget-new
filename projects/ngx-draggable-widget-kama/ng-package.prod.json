@@ -2,6 +2,11 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-draggable-widget-kama",
   "lib": {
-    "entryFile": "src/public_api.ts"
-  }
+    "entryFile": "src/public_api.ts",
+    "styleIncludePaths": ["src/NgDraggableWidget.css"]
+  },
+  "assets": [
+    "README.md",
+    "./styles/**/*.theme.scss"
+  ]
 }
