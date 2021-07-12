@@ -1,10 +1,10 @@
-[![GitHub version](http://img.shields.io/github/release/KAMAELUA%2Fngx-draggable-widget.svg)](https://github.com/KAMAELUA/ngx-draggable-widget) 
+[![GitHub version](http://img.shields.io/github/release/KAMAELUA%2Fngx-draggable-widget-kama.svg)](https://github.com/KAMAELUA/ngx-draggable-widget) 
 [![npm version](http://img.shields.io/npm/v/ngx-draggable-widget-kama.svg)](https://www.npmjs.com/package/ngx-draggable-widget-kama) 
-[![license](http://img.shields.io/github/license/KAMAELUA%2Fngx-draggable-widget.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/blob/master/LICENSE) 
-[![open issues](http://img.shields.io/github/issues/KAMAELUA%2Fngx-draggable-widget.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/issues) 
+[![license](http://img.shields.io/github/license/KAMAELUA%2Fngx-draggable-widget-kama.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/blob/master/LICENSE) 
+[![open issues](http://img.shields.io/github/issues/KAMAELUA%2Fngx-draggable-widget-kama.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/issues) 
 
 # Ngx Draggable Widget Kama
-Ngx Draggable Widget Kama is a re-worked Ngx Draggable Widget for better [Angular 6](http://angular.io) support. 
+Ngx Draggable Widget Kama is a re-worked Ngx Draggable Widget for better [Angular](http://angular.io) support. 
 
 # Original Ngx Draggable Widget
 Original Ngx Draggable Widget is a **_drag & drop , resize , cascade , overlap_** capable __"[ngWidgetContainer]"__ and __"[ngWidget]"__ structural directive component library for [Angular 4](https://devdocs.io/angular~4/).
@@ -78,6 +78,7 @@ To configure the widget container with your own options, it is as easy as adding
 |limit_to_screen|false|When resizing the screen, with this true and auto_resize false, the grid will re-arrange to fit the screen size. Please note, at present this only works with cascade direction up.
 |widget_width_factor|22|number of pixels that defines a logical user defined width. By default this is not set.However if this is set then unitx in the respective widget will be used to set the initial size of the the widget and override sizex of the widget. Note this is only meaningful to the widgets if they specifically have unitx defined. Else this value has no effect
 |widget_height_factor|22|number of pixels that defines a logical user defined height. By default this is not set.However if this is set then unity in the respective widget will be used to set the initial size of the the widget height and override sizey of the widget. Note this is only meaningful to the widgets if they specifically have unity defined. Else this value has no effect
+|debug|false|Enables debug logging into console for the widget container
 
 #### The defaults for the widget item are:
 
@@ -102,6 +103,7 @@ To configure the widget container with your own options, it is as easy as adding
 |minHeight|0|The minimum height of a particular widget. This value will override the value from the widget container, as well as the minimum rows if the resulting size is larger
 |unitx|0|The unitx defines the initial logical width of the widget. The actual width in pixels is the multiple of this logical unit with the corresponding widget_width_factor
 |unity|0|The unity defines the initial logical height of the widget. The actual height in pixels is the multiple of this logical unit with the corresponding widget_height_factor
+|debug|false|Enables debug logging into console for the current widget
 
 #### Event Handling
 -------------------

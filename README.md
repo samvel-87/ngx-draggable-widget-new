@@ -1,10 +1,10 @@
-[![GitHub version](http://img.shields.io/github/release/KAMAELUA%2Fngx-draggable-widget.svg)](https://github.com/KAMAELUA/ngx-draggable-widget) 
+[![GitHub version](http://img.shields.io/github/release/KAMAELUA%2Fngx-draggable-widget-kama.svg)](https://github.com/KAMAELUA/ngx-draggable-widget) 
 [![npm version](http://img.shields.io/npm/v/ngx-draggable-widget-kama.svg)](https://www.npmjs.com/package/ngx-draggable-widget-kama) 
-[![license](http://img.shields.io/github/license/KAMAELUA%2Fngx-draggable-widget.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/blob/master/LICENSE) 
-[![open issues](http://img.shields.io/github/issues/KAMAELUA%2Fngx-draggable-widget.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/issues) 
+[![license](http://img.shields.io/github/license/KAMAELUA%2Fngx-draggable-widget-kama.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/blob/master/LICENSE) 
+[![open issues](http://img.shields.io/github/issues/KAMAELUA%2Fngx-draggable-widget-kama.svg)](https://github.com/KAMAELUA/ngx-draggable-widget/issues) 
 
 # Ngx Draggable Widget Kama
-Ngx Draggable Widget Kama is a re-worked Ngx Draggable Widget for better [Angular 6](http://angular.io) support. 
+Ngx Draggable Widget Kama is a re-worked Ngx Draggable Widget for better [Angular](http://angular.io) support. 
 
 # Original Ngx Draggable Widget
 Original Ngx Draggable Widget is a **_drag & drop , resize , cascade , overlap_** capable __"[ngWidgetContainer]"__ and __"[ngWidget]"__ structural directive component library for [Angular 4](https://devdocs.io/angular~4/).
