@@ -1,7 +1,7 @@
 {
   "name": "ngx-draggable-widget-kama",
   "license": "MIT",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "peerDependencies": {
     "@angular/common": "^10.0.0 | ^11 | ^12",
     "@angular/core": "^10.0.0 | ^11 | ^12"
