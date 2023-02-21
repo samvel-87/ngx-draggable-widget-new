@@ -4,5 +4,9 @@
   "lib": {
     "entryFile": "src/public_api.ts",
     "styleIncludePaths": ["src/NgDraggableWidget.css"]
-  }
+  },
+  "deleteDestPath": true,
+  "assets": [
+    "src/*.css"
+  ]
 }

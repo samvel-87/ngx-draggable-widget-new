@@ -4,9 +4,8 @@ import {NgWidget} from './directives/NgWidget';
 import {NgWidgetContainer} from './directives/NgWidgetContainer';
 
 @NgModule({
-  imports: [],
-  declarations: [NgWidgetPlaceholder, NgWidget, NgWidgetContainer],
-  exports: [NgWidgetContainer, NgWidget],
-  entryComponents: [NgWidgetPlaceholder]
+    imports: [],
+    declarations: [NgWidgetPlaceholder, NgWidget, NgWidgetContainer],
+    exports: [NgWidgetContainer, NgWidget]
 })
 export class NgDraggableWidgetModule { }
