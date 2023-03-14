@@ -1,7 +1,7 @@
 {
   "name": "ngx-draggable-widget-kama",
   "license": "MIT",
-  "version": "0.0.0-development",
+  "version": "1.0.18",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -71,6 +71,10 @@
     }
   },
   "release": {
+    "ci": false,
+    "branches": [
+      "master"
+    ],
     "publish": {
       "pkgRoot": "dist/ngx-draggable-widget-kama"
     },
