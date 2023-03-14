@@ -12,7 +12,7 @@
     "build-lib": "ng build ngx-draggable-widget-kama --configuration production",
     "npm-pack": "cd dist/ngx-draggable-widget-kama && npm pack",
     "package": "npm run build-lib && npm run npm-pack",
-    "semantic-release": "emantic-release --debug",
+    "semantic-release": "semantic-release --debug",
     "commit": "git-cz"
   },
   "private": false,
