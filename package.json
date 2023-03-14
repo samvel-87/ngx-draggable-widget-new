@@ -12,6 +12,7 @@
     "build-lib": "ng build ngx-draggable-widget-kama --configuration production",
     "npm-pack": "cd dist/ngx-draggable-widget-kama && npm pack",
     "package": "npm run build-lib && npm run npm-pack",
+    "copy": "copyfiles -u 3 projects/ngx-draggable-widget-kama/src/NgDraggableWidget.css dist/ngx-draggable-widget-kama",
     "semantic-release": "semantic-release --debug",
     "commit": "git-cz"
   },
@@ -38,6 +39,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~12.19.3",
     "codelyzer": "^6.0.0",
+    "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "^3.3.0",
     "jasmine-core": "^4.5.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -84,7 +86,10 @@
     "commit-analyzer": {
       "preset": "angular",
       "releaseRules": [
-        {"type": "ci", "release": "patch"}
+        {
+          "type": "ci",
+          "release": "patch"
+        }
       ]
     }
   }
