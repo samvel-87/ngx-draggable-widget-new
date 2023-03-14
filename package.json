@@ -12,7 +12,7 @@
     "build-lib": "ng build ngx-draggable-widget-kama --configuration production",
     "npm-pack": "cd dist/ngx-draggable-widget-kama && npm pack",
     "package": "npm run build-lib && npm run npm-pack",
-    "semantic-release": "semantic-release",
+    "semantic-release": "set GITHUB_TOKEN=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 semantic-release -d",
     "commit": "git-cz"
   },
   "private": false,
@@ -68,6 +68,20 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "publish": {
+      "pkgRoot": "dist/ngx-draggable-widget-kama"
+    },
+    "prepare": {
+      "pkgRoot": "projects/ngx-draggable-widget-kama"
+    },
+    "commit-analyzer": {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "ci", "release": "patch"}
+      ]
     }
   }
 }
