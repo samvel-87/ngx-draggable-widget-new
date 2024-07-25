@@ -53,18 +53,18 @@
     "ts-node": "~9.0.0",
     "tslib": "^2.0.0",
     "tslint": "~6.1.3",
-    "typescript": "^5.4.2"
+    "typescript": "5.4.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KAMAELUA/ngx-draggable-widget-kama.git"
+    "url": "https://github.com/samvel-87/ngx-draggable-widget-new.git"
   },
   "author": {
-    "name": "Andrey Chugay",
-    "email": "kamaelua@gmail.com"
+    "name": "Samvel Asatryan",
+    "email": ""
   },
   "contributors": [
-    "Arup Banerjee <arup@alanaamy.net> (https//www.alanaamy.net)"
+    "Samvel Asatryan"
   ],
   "config": {
     "commitizen": {
