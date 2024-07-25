@@ -1,24 +1,13 @@
 {
-  "name": "ngx-draggable-widget-kama",
+  "name": "@fe-titans/ngx-draggable-widget",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "peerDependencies": {
-    "@angular/common": "^14",
-    "@angular/core": "^14"
+    "@angular/common": "^17",
+    "@angular/core": "^17"
   },
   "scripts": {
     "build": "ng-packagr -p package.json"
   },
-  "dependencies": {},
-  "author": {
-    "name": "Andrey Chugay",
-    "email": "kamaelua@gmail.com"
-  },
-  "contributors": [
-    "Arup Banerjee <arup@alanaamy.net> (https//www.alanaamy.net)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KAMAELUA/ngx-draggable-widget-kama.git"
-  }
+  "dependencies": {}
 }
