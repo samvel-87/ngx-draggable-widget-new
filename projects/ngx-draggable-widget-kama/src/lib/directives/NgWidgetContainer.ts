@@ -4,7 +4,6 @@ import {
     Directive,
     ElementRef,
     EventEmitter,
-    ComponentFactoryResolver,
     ComponentRef,
     KeyValueDiffer,
     KeyValueDiffers,
@@ -132,7 +131,6 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy, INgWidgetC
     // 	constructor
     constructor(private _differs: KeyValueDiffers,
                 private _ngEl: ElementRef,
-                private componentFactoryResolver: ComponentFactoryResolver,
                 private _renderer2: Renderer2,
                 private _containerRef: ViewContainerRef) {
     }
@@ -1531,8 +1529,7 @@ export class NgWidgetContainer implements OnInit, DoCheck, OnDestroy, INgWidgetC
         const pos: INgWidgetPosition = item.getWidgetPosition();
         const dims: INgWidgetSize = item.getSize();
 
-        const factory = this.componentFactoryResolver.resolveComponentFactory(NgWidgetPlaceholder);
-        const componentRef: ComponentRef<NgWidgetPlaceholder> = item.containerRef.createComponent(factory);
+        const componentRef: ComponentRef<NgWidgetPlaceholder> = item.containerRef.createComponent(NgWidgetPlaceholder);
         this._placeholderRef = componentRef;
         const placeholder: NgWidgetPlaceholder = componentRef.instance;
         placeholder.registerGrid(this);
